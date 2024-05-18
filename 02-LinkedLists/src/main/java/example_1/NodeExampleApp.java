@@ -1,3 +1,7 @@
+package example_1;
+
+import example_1.MyNode;
+
 public class NodeExampleApp {
 
     public static void main(String[] args) {
