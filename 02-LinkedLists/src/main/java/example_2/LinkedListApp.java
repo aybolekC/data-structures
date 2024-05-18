@@ -13,7 +13,12 @@ public class LinkedListApp {
         list1.printNodes();
         System.out.println();
 
-        System.out.println("Kth item from last is: " +list1.getKthFromLast(4));
+        list1.removeKthFromLast(4);
+        list1.printNodes();
+        System.out.println();
+
+
+//        System.out.println("Kth item from last is: " +list1.getKthFromLast(4));
 
 //
 //        System.out.println(list1.indexOf(4));
