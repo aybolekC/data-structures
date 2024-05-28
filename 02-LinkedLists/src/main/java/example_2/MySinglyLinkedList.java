@@ -154,4 +154,37 @@ public class MySinglyLinkedList {
     }
 
 
+    void removeDuplicatesFromLinkedList(){
+
+        Node current=head;
+        while(current!=null){
+            Node nextDistinctNode=current.next;
+            while (nextDistinctNode!=null&&nextDistinctNode.value== current.value){
+                nextDistinctNode=nextDistinctNode.next;
+            }
+            current.next=nextDistinctNode;
+            current=nextDistinctNode;
+        }
+    }
+
+    void reverse(){
+
+        if(isEmpty()) return;
+
+        Node previous=head;
+        Node current=head.next;
+
+        while(current!=null){
+            Node nextNode=current.next;
+            current.next=previous;
+            previous=current;
+            current=nextNode;
+        }
+        tail=head;
+        tail.next=null;
+        head=previous;
+
+
+    }
+
 }
